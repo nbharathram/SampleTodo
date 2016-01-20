@@ -1,6 +1,7 @@
 package com.codepath.todotask;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
@@ -37,7 +39,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        final TextView myTitle = (TextView) findViewById(R.id.myTitle);
+        if (myTitle != null) {
+            myTitle.setText("To Do Task List for Today");
+            myTitle.setTextColor(Color.BLUE);
+            //myTitle.setBackgroundColor(Color.BLUE);
+        }
         // Read the Tasks from a Persisted Data Store
         readItems();
         lvItems = (ListView) findViewById(R.id.lvItems);

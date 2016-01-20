@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="0dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.codepath.todotask.MainActivity"
     tools:showIn="@layout/activity_main">
@@ -30,7 +30,9 @@
         android:text="Enter a New Item"
         android:layout_alignTop="@+id/btnAddItem"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/btnAddItem"
+        android:layout_toStartOf="@+id/btnAddItem" />
 
     <ListView
         android:layout_width="wrap_content"
@@ -40,9 +42,22 @@
         android:layout_alignParentStart="true"
         android:layout_toLeftOf="@+id/btnAddItem"
         android:layout_toStartOf="@+id/btnAddItem"
-        android:layout_alignParentTop="true"
-        android:layout_above="@+id/btnAddItem"
         android:layout_alignRight="@+id/btnAddItem"
-        android:layout_alignEnd="@+id/btnAddItem" />
+        android:layout_alignEnd="@+id/btnAddItem"
+        android:layout_below="@+id/myTitle"
+        android:layout_above="@+id/btnAddItem" />
 
+    <TextView
+        android:id="@+id/myTitle"
+        android:text="This is my new title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimaryDark"
+        android:paddingLeft="0dp"
+        android:paddingRight="0dp"
+        android:layout_alignRight="@+id/lvItems"
+        android:layout_alignEnd="@+id/lvItems"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

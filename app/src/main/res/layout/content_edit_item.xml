@@ -18,11 +18,12 @@
         android:inputType="textMultiLine"
         android:ems="10"
         android:id="@+id/editTaskDetail"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_above="@+id/saveBtn"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="97dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
@@ -30,8 +31,18 @@
         android:text="Save Task"
         android:id="@+id/saveBtn"
         android:onClick="onSaveEdits"
-        android:layout_below="@+id/editTaskDetail"
-        android:layout_alignRight="@+id/editTaskDetail"
-        android:layout_alignEnd="@+id/editTaskDetail"
-        android:layout_marginTop="35dp" />
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Edit the Task"
+        android:id="@+id/textView"
+        android:layout_marginTop="33dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
